@@ -1,4 +1,4 @@
-module carswelltech/common
+module github.com/carswelltech/common
 
 go 1.18
 
