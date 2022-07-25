@@ -1,4 +1,4 @@
-module carswelltech/common
+module carswell.tech/common
 
 go 1.18
 
