@@ -6,6 +6,10 @@ import (
 	"golang.org/x/exp/constraints"
 )
 
+const (
+	IndexOutOfBoundsErrorMsg string = "index out of bounds (%v)"
+)
+
 type (
 	IndexOutOfBoundsError[I constraints.Integer] struct {
 		Index I
@@ -13,5 +17,5 @@ type (
 )
 
 func (e *IndexOutOfBoundsError[I]) Error() string {
-	return fmt.Sprintf("index out of bounds (%v)", e.Index)
+	return fmt.Sprintf(IndexOutOfBoundsErrorMsg, e.Index)
 }
