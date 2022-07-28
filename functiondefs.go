@@ -10,6 +10,7 @@ type (
 	Walker[V any]                     func(V) error
 	Reducer[V1 any, V2 any]           func(V1, ...V2) (V2, error)
 	Folder[V any]                     Reducer[V, V]
+	SimpleIteratorFunc[V any]         func() (V, bool)
 	SimpleFilter[V any]               func(V) bool
 	SimpleTransformer[V1 any, V2 any] func(V1) V2
 	SimpleMapper[V any]               SimpleTransformer[V, V]
